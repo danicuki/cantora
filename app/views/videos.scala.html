@@ -1,0 +1,26 @@
+@(videos: scala.xml.NodeSeq)
+
+@main(Messages("site.video")) {
+
+<script type="text/ecmascript">
+    $(function() {
+      $("ul.demo1").ytplaylist({addThumbs:true, autoPlay:true, playerHeight: 450, playerWidth: 675,allowFullScreen: true
+      });
+      $(".scrollable").scrollable();
+    });
+
+</script>
+
+<div class="grid_8" style="text-align: center">
+
+  <div class="yt_holder">
+      <div id="ytvideo"></div>
+  <div class="clear">&nbsp;</div>
+
+  <ul class="demo1">
+    @videos.map { video => 
+      <li><a href="">@video</a></li>
+    }
+  </ul>
+</div>
+}

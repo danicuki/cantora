@@ -1,0 +1,19 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET     /                           controllers.Application.index
+
+# Map static resources from the /public folder to the /assets URL path
+GET     /assets/*file               controllers.Assets.at(path="/public", file)
+
+GET     /images/﻿*file               controllers.ExternalAssets.at(path="http://static.cantora.mus.br/images", file)
+
+GET     /cantora                           controllers.Application.cantora
+GET     /musicas                           controllers.Application.music
+GET     /agenda                           controllers.Application.shows
+GET     /social                           controllers.Application.social
+GET     /novidades                           controllers.Application.news
+GET     /fotos                           controllers.Application.photos
+GET     /videos                           controllers.Application.videos

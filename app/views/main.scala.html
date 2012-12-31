@@ -1,0 +1,94 @@
+@(title: String)(content: Html)
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
+  "http://www.w3.org/TR/html4/strict.dtd">
+
+<html lang="pt-br">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <title>@Messages("site.title")  @title</title>
+  <link rel="shortcut icon" href="http://static.cantora.mus.br/images/mini_logo.png" type="image/png">
+  <META NAME="TITLE" CONTENT="@Messages("site.title")  @title" />
+  <META NAME="KEYWORDS" CONTENT="@Messages("site.keywords") @title " />
+
+  <META NAME="DESCRIPTION" CONTENT="@Messages("site.title")  @title" />
+  <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
+
+  <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/grid.css")">
+  <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/style.css")">
+  <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/galleriffic.css")">
+
+  <script src="@routes.Assets.at("javascripts/applicaton.js")" type="text/javascript"></script>
+  <script src="@routes.Assets.at("javascripts/jquery-galletiffic.js")" type="text/javascript"></script>
+  <script src="@routes.Assets.at("javascripts/jquery-opacity.js")" type="text/javascript"></script>
+  <script src="@routes.Assets.at("javascripts/jquery.js")" type="text/javascript"></script>
+  <script src="@routes.Assets.at("javascripts/jquery.scrollTo-min.js")" type="text/javascript"></script>
+  <script src="@routes.Assets.at("javascripts/jquery.youtubeplaylist.js")" type="text/javascript"></script>
+
+
+</head>
+<body>
+  <div class="container container_8">
+    <div class="grid_1 menu">
+      <a href="@routes.Application.index()"><img src="http://static.cantora.mus.br/images/logo.png"></a>
+    </div>
+
+    <div class="grid_7">
+      <div style="float: right; font-size: 10px"><a href="?locale=en">English</a><br><a href="?locale=pt-BR">Portugês</a><br><a href="?locale=fr">Français</a></div>
+
+      <ul class="top_menu">
+        <li class="menu"><a href="@routes.Application.cantora" title="@Messages("site.singer")">@Messages("site.singer")</a></li>
+        <li class="menu"><a href="@routes.Application.music" title="@Messages("site.music")">@Messages("site.music")</a></li>
+        <li class="menu"><a href="@routes.Application.photos" title="@Messages("site.photo")">@Messages("site.photo")</a></li>
+        <li class="menu"><a href="@routes.Application.videos" title="@Messages("site.video")">@Messages("site.video")</a></li>
+        <li class="menu"><a href="@routes.Application.social" title="@Messages("site.social")">@Messages("site.social")</a></li>
+        <li class="menu"><a href="@routes.Application.shows" title="@Messages("site.shows")">@Messages("site.shows")</a></li>
+        <li class="menu"><a href="@routes.Application.news" title="@Messages("site.news")">@Messages("site.news")</a></li>
+      </ul>
+
+      <div class="grid_6 menu">
+<iframe src="http://www.facebook.com/plugins/like.php?href=http%3A%2F%2Fwww.cantora.mus.br&amp;layout=box_count&amp;show_faces=true&amp;width=450&amp;action=like&amp;font&amp;colorscheme=light&amp;height=80" scrolling="no" frameborder="0" style="float: right; width: 50px;height: 69px;margin-top: 16px;" allowtransparency="false"></iframe>
+
+        <div style="padding: 5px;">
+        <img src="http://static.cantora.mus.br/images/assinatura_small.png" width="507" height="51" style ="border: 1px; padding: 10px 0px 0px 120px;" />
+        </div>
+      </div>
+    </div>
+
+    <div class="clear">
+      &nbsp;
+    </div>
+
+    @content
+
+    <div class="clear">
+      &nbsp;
+    </div>
+    <div class="grid-8">
+      <br>
+      <h5>@Messages("site.contact") : <a href="mailto:producao@@alcarpe.com.br">producao@@alcarpe.com.br</a></h5>
+    </div>
+
+
+  </div>
+
+  <script type="text/javascript">
+
+    var _gaq = _gaq || [];
+    _gaq.push(['_setAccount', 'UA-474621-6']);
+    _gaq.push(['_setSiteSpeedSampleRate', 100]);
+    _gaq.push(['_trackPageview']);
+
+    (function() {
+      var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+      ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+      var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+    })();
+
+  </script>
+  </body>
+</html>
+
+
+
+
