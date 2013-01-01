@@ -19,7 +19,7 @@
 
   <ul class="demo1">
     @videos.map { video => 
-      <li><a href="">@video</a></li>
+      <li><a href="@{((video \ "link")(0).attribute("href"))}">@{(video \ "title")(0).text}</a></li>
     }
   </ul>
 </div>

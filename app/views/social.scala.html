@@ -1,0 +1,40 @@
+@(tweets: scala.xml.NodeSeq)
+
+@main(Messages("site.social_title")) {
+
+<h1>@Messages("site.social_title")</h1>
+
+<div class="grid_2">
+  <br>
+  <a href="http://www.facebook.com/pages/Daniella-Alcarpe/173543722041" target="_blank"><img src="http://static.cantora.mus.br/images/facebook.png" border="0"/></a><br><br>
+  <a href="http://www.youtube.com/daniellaalcarpe" target="_blank"><img src="http://static.cantora.mus.br/images/youtube.png" border="0"/></a><br><br>
+
+  <a href="http://www.mpb.com/daniellaalcarpe" target="_blank"><img src="http://static.cantora.mus.br/images/mpb.gif" border="0"/></a><br><br>
+
+  <a href="http://www.orkut.com.br/Main#Community?cmm=1521785" target="_blank"><img src="http://static.cantora.mus.br/images/orkut.png" border="0"/></a><br><br>
+
+  <a href="http://www.myspace.com/daniellaalcarpe" target="_blank"><img src="http://static.cantora.mus.br/images/myspace.png" border="0"/></a><br><br>
+
+  <a href="http://danicuki.podbean.com/" target="_blank"><img src="http://static.cantora.mus.br/images/podcast.png" border="0"/></a><br><br>
+  <a href="http://www.jango.com/music/Daniella+Alcarpe" target="_blank"><img src="http://static.cantora.mus.br/images/jango.png" border="0"/></a><br><br>
+
+</div>
+<div class="grid_3">
+  <a href="http://www.twitter.com/cantora"><img src="http://static.cantora.mus.br/images/twitter.png" border="0"/></a>
+
+    @tweets.map { twit => 
+		  <div class="comment_header">
+		    @{(twit \ "pubDate").text}
+		  </div>
+		  <div class="comment"><a href="@{(twit \ "link").text}">@{(twit \ "title").text}</a></div>
+
+    }
+</div>
+
+<div class="grid_3">
+  <h2>@Messages("site.fans")</h2>
+    <div style="background-color: white; width: 400px; padding: 3px">
+    <div id="fb-root"></div><script src="http://connect.facebook.net/en_US/all.js#xfbml=1"></script><fb:comments href="www.cantora.mus.br" num_posts="3" width="400" colorscheme="light"></fb:comments>
+    </div>
+    </div>
+}

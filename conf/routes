@@ -17,3 +17,4 @@ GET     /social                           controllers.Application.social
 GET     /novidades                           controllers.Application.news
 GET     /fotos                           controllers.Application.photos
 GET     /videos                           controllers.Application.videos
+GET     /lang                             controllers.Application.changeLocale
