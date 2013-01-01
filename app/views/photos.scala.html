@@ -1,0 +1,54 @@
+@(albuns: List[play.api.libs.concurrent.Promise[List[String]]])
+
+@main(Messages("site.photo")) {
+
+<h1>@Messages("site.photo")</h1>
+
+<div class="grid_8">
+    <ul>
+              @albuns.map { album =>
+            @album.value.get.map { photo =>
+              <li class="photo-item hidden"><span class='image-holder'>@photo</span></li>
+          } }
+   </ul>
+</div>
+
+<script>
+
+$(document).ready(function(){
+    $(".photo-item.hidden").each(function(){
+        if($(this).index() < 8) {
+            $(this).removeClass("hidden").addClass("loading");
+        }
+    });
+    loadFolios();
+});
+
+
+function loadFolios(){
+    var firstItem = $("li.photo-item.loading:first");
+    var myImgPath = $(".image-holder", firstItem).text();
+    $("<img />").load(function(){
+        $(".image-holder", firstItem).html($(this));
+        firstItem.removeClass("loading");
+        //CHECKS FOR ANY NOT LOADED, IF SO, LOAD NEXT
+        if($("li.photo-item.loading").size()){
+            loadFolios();
+        }
+    }).attr('src',myImgPath);
+}
+
+//THIS DETECTS SCROLL POSITION AND ADDS TWO MORE IF BELOW
+$(window).scroll(function(){
+    //LOAD MORE PORTFOLIOS
+    var scrollBottom = $(document).height() - $(window).height() - $(window).scrollTop();
+    if(scrollBottom < 500){
+        $(".photo-item.hidden:first").removeClass("hidden").addClass("loading");
+        loadFolios();
+    }
+});
+
+
+
+</script>
+}

@@ -24,12 +24,12 @@ trait CookieLang extends Controller {
       })
   }
 
-  override implicit def lang(implicit request: RequestHeader) = {
-    request.cookies.get(LANG) match {
-      case None => super.lang(request)
-      case Some(cookie) => Lang(cookie.value)
-    }
-  }
+  //  override implicit def lang(implicit request: RequestHeader) = {
+  //    request.cookies.get(LANG) match {
+  //      case None => super.lang(request)
+  //      case Some(cookie) => Lang(cookie.value)
+  //    }
+  //  }
 
   private val LANG = "lang"
   protected val HOME_URL = "/"

@@ -1,14 +1,9 @@
-@(title: String)(content: Html)
+@(title: String)(content: Html)(implicit lang: Lang)
+
+
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
   "http://www.w3.org/TR/html4/strict.dtd">
-
-@implicitLang = @{implicit request: RequestHeader => 
-    request.cookies.get("lang") match {
-      case None => Lang("en")
-      case Some(cookie) => Lang(cookie.value)
-    }
-}
 
 <html lang="pt-br">
 <head>
@@ -19,7 +14,6 @@
   <META NAME="KEYWORDS" CONTENT="@Messages("site.keywords") @title " />
 
   <META NAME="DESCRIPTION" CONTENT="@Messages("site.title")  @title" />
-  <link rel="shortcut icon" type="image/png" href="@routes.Assets.at("images/favicon.png")">
 
   <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/grid.css")">
   <link rel="stylesheet" media="screen" href="@routes.Assets.at("stylesheets/style.css")">
@@ -35,6 +29,7 @@
 
 </head>
 <body>
+@{lang.code}
   <div class="container container_8">
     <div class="grid_1 menu">
       <a href="@routes.Application.index()"><img src="http://static.cantora.mus.br/images/logo.png"></a>
