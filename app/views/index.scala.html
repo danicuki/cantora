@@ -1,4 +1,6 @@
-@(videos: List[String]) @main("oi") {
+@(videos: List[String])(implicit request: RequestHeader)
+
+@main("oi") {
 <div class="grid_8 last">
 	<center>
 		<a href="@routes.Download.download" class="superlarge awesome red" title="@Messages("site.download_cd")">@Messages("site.download_cd")</a>

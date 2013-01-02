@@ -20,16 +20,17 @@ trait CookieLang extends Controller {
       },
       locale => {
         Logger.logger.debug("Change user lang to : " + locale)
-        Redirect(referrer).withCookies(Cookie(LANG, locale))
+        Redirect(referrer).withCookies(Cookie(LANG, locale)).withSession(
+          session + ("lang" -> locale))
       })
   }
 
-  //  override implicit def lang(implicit request: RequestHeader) = {
-  //    request.cookies.get(LANG) match {
-  //      case None => super.lang(request)
-  //      case Some(cookie) => Lang(cookie.value)
-  //    }
-  //  }
+  override implicit def lang(implicit request: RequestHeader) = {
+    request.cookies.get(LANG) match {
+      case None => super.lang(request)
+      case Some(cookie) => Lang(cookie.value)
+    }
+  }
 
   private val LANG = "lang"
   protected val HOME_URL = "/"
