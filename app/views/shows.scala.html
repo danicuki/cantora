@@ -1,4 +1,4 @@
-@()(implicit lang: Lang)
+@()(implicit request: RequestHeader)
 @main(Messages("site.shows")) {
 
 <h1>@Messages("site.shows")</h1>
@@ -10,5 +10,5 @@
 <p> Dia 23 de junho, quarta-feira, �s 22:30, show especial de Daniella Alcarpe no <a href="http://www.aovivomusic.com.br/">Ao Vivo Music Bar</a>.</p>
 </div> -->
 
-<iframe src="https://www.google.com/calendar/b/0/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=720&amp;wkst=1&amp;hl=@{lang.code}&amp;bgcolor=%23FFFFFF&amp;src=alcarpe.com.br_c2u591stn0fed9t6vcussc5m3s%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=America%2FSao_Paulo" style=" border-width:0 " width="980" height="720" frameborder="0" scrolling="no"></iframe>
+<iframe src="https://www.google.com/calendar/b/0/embed?showTitle=0&amp;showNav=0&amp;showPrint=0&amp;showCalendars=0&amp;mode=AGENDA&amp;height=720&amp;wkst=1&amp;hl=@{"en"}&amp;bgcolor=%23FFFFFF&amp;src=alcarpe.com.br_c2u591stn0fed9t6vcussc5m3s%40group.calendar.google.com&amp;color=%23182C57&amp;ctz=America%2FSao_Paulo" style=" border-width:0 " width="980" height="720" frameborder="0" scrolling="no"></iframe>
 }

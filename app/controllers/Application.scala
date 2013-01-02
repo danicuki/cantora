@@ -21,12 +21,12 @@ object Application extends CookieLang {
     Ok(views.html.index(homeVideos))
   }
 
-  def cantora = Action { Ok(views.html.cantora()) }
+  def cantora = Action { implicit request => Ok(views.html.cantora()) }
 
-  def music = Action { Ok(views.html.music()) }
+  def music = Action { implicit request => Ok(views.html.music()) }
 
   def photos = Cached("photos", 18000) {
-    Action {
+    Action { implicit request =>
       Async {
         WS.url("https://graph.facebook.com/daniella.alcarpe/albums").get().map { response =>
           val albuns = (response.json \ "data").
@@ -48,7 +48,7 @@ object Application extends CookieLang {
   }
 
   def videos = Cached("videos", 18000) {
-    Action {
+    Action { implicit request =>
       Async {
         WS.url("http://gdata.youtube.com/feeds/api/users/daniellaalcarpe/uploads").get().map { response =>
           Ok(views.html.videos(response.xml \ "entry"))
@@ -58,7 +58,7 @@ object Application extends CookieLang {
   }
 
   def social = Cached("social", 18000) {
-    Action {
+    Action { implicit request =>
       Async {
         WS.url("https://api.twitter.com/1/statuses/user_timeline.rss?user_id=22095868").get().map { response =>
           Ok(views.html.social(response.xml \\ "item"))
@@ -67,8 +67,8 @@ object Application extends CookieLang {
     }
   }
 
-  def shows = Action { Ok(views.html.shows()) }
+  def shows = Action { implicit request => Ok(views.html.shows()) }
 
-  def news = Action { Ok(views.html.news()) }
+  def news = Action { implicit request => Ok(views.html.news()) }
 
 }

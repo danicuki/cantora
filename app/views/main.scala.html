@@ -1,6 +1,6 @@
-@(title: String)(content: Html)(implicit lang: Lang)
+@(title: String)(content: Html)(implicit request: RequestHeader)
 
-
+@implicitLang = @{ request.session.get("lang") match { case Some(t) => new Lang(t); case None => new Lang("en")  }}
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
   "http://www.w3.org/TR/html4/strict.dtd">
@@ -29,14 +29,13 @@
 
 </head>
 <body>
-@{lang.code}
   <div class="container container_8">
     <div class="grid_1 menu">
       <a href="@routes.Application.index()"><img src="http://static.cantora.mus.br/images/logo.png"></a>
     </div>
 
     <div class="grid_7">
-      <div style="float: right; font-size: 10px"><a href="?locale=en">English</a><br><a href="?locale=pt-BR">Portugês</a><br><a href="?locale=fr">Français</a></div>
+      <div style="float: right; font-size: 10px"><a href="/lang?locale=en-US">English</a><br><a href="/lang?locale=pt-BR">Portugês</a><br><a href="/lang?locale=fr">Français</a></div>
 
       <ul class="top_menu">
         <li class="menu"><a href="@routes.Application.cantora" title="@Messages("site.singer")">@Messages("site.singer")</a></li>
