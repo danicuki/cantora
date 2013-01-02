@@ -10,6 +10,9 @@ import play.api.i18n.Lang
 import play.api.libs.json.JsArray
 import play.api.libs.json.JsObject
 import scala.collection.mutable.MutableList
+import play.api.data._
+import play.api.data.Forms._
+import play.api.data.Form
 
 object Application extends CookieLang {
 
@@ -59,7 +62,6 @@ object Application extends CookieLang {
     Action {
       Async {
         WS.url("https://api.twitter.com/1/statuses/user_timeline.rss?user_id=22095868").get().map { response =>
-          //      WS.url("http://127.0.0.1:3000/timeline.xml").get().map { response =>
           Ok(views.html.social(response.xml \\ "item"))
         }
       }
@@ -69,4 +71,17 @@ object Application extends CookieLang {
   def shows = Action { Ok(views.html.shows()) }
 
   def news = Action { Ok(views.html.news()) }
+
+  val userForm = Form(
+    tuple(
+      "email" -> text,
+      "full_name" -> text))
+
+  def download = Action {
+    Ok(views.html.download(userForm))
+  }
+
+  def addVisitor = Action {
+    Redirect(routes.Application.index)
+  }
 }

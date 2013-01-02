@@ -1,0 +1,27 @@
+@(visitorForm: Form[(String, String)])
+
+@import helper._
+
+@main(Messages("site.music_download")) {
+
+<div class="grid_2">
+  <h1>@Messages("site.music_download") &nbsp;&nbsp;&nbsp;</h1>
+</div>
+
+<div class="grid_8" style="text-align: justify;">
+
+  @Messages("site.download_instructions")
+  <br><br>
+      @form(routes.Application.addVisitor) {
+        <p>        
+        @inputText(visitorForm("name"), 'size -> 30) <br>
+        </p>
+        <p>        
+        @inputText(visitorForm("email"), 'size -> 30) <br>
+        </p>
+    <p>
+        <input type="submit" value="@Messages("site.music_download")" class="awesome red large">
+    </p>
+    }
+</div>
+}

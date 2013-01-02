@@ -1,29 +1,29 @@
-site.title=Cantora Daniella Alcarpe da música popular brasileira MPB
-site.keywords=daniella alcarpe, cantora, mpb, música brasileira
-site.name=Nome
-site.singer=Cantora
-site.fans=Fãs
-site.music=Música
-site.photo=Foto
-site.video=Vídeo
+site.title=Daniella Alcarpe Chanteuse de la musique populaire brÃ©silienne MPB
+site.keywords=daniella alcarpe, Chanteuse, mpb, musique populaire brÃ©silienne
+site.name=PrÃ©nom
+site.singer=Chanteuse
+site.fans=Fan
+site.music=Musique
+site.photo=Photo
+site.video=VidÃ©o
 site.social=Social
-site.social_title=Daniella nas redes sociais
-site.download_instructions="Com o objetivo de divulgar o máximo possível o trabalho contido neste CD, este site permite o download total e gratuito de todas as músicas. Para baixar o conteúdo agora, é só preencher o formulário abaixo. Usaremos o seu e-mail apenas para enviar as novidades sobre a Daniella"
-site.download_text1=o download é gratuíto, mas se você quiser contribuir, pode fazer uma doação no valor que desejar.
-site.download_text2="Ajude a Daniella nesta divulgação=compre o CD e presenteie um amigo! E se você quiser ajudar ainda mais, faça uma doação=qualquer quantia é bem-vinda! E o valor arrecadado vai se somar à quantia necessária para a gravação e divulgação do segundo CD!"
-site.buy_text=Clique aqui para comprar o CD
+site.social_title=Daniella sur les rÃ©seaux sociaux
+site.download_instructions="Afin de diffuser autant que possible le travail contenu sur ce CD, ce site permet le tÃ©lÃ©chargement libre et gratuit de toutes les chansons. Pour tÃ©lÃ©charger le contenu maintenant, il suffit de remplir le formulaire ci-dessous. Nous utiliserons votre e-mail uniquement pour vous envoyer les nouvelles de Daniella"
+site.download_text1="le tÃ©lÃ©chargement est gratuit, mais si vous voulez contribuer, peut faire un don dans le montant que vous souhaitez."
+site.download_text2="Aidez Daniella Ã  la divulgation=achetez le CD et lui donnez Ã  un ami comme cadeau ! Et si vous voulez aider le plus, faites un don =quelque montant est bienvenue ! Et l'argent collectÃ© sera ajoutÃ© au montant requis pour l'enregistrement et la divulgation de la deuxiÃ¨me CD!"
+site.buy_text=Cliquez ici pour acheter le CD
 site.buy_link="http://www.livrariacultura.com.br/scripts/musica/resenha/resenha.asp?nitem=22165576&sid=7382211271283351229911332&k5=1B70FB2E&uid="
-site.donate=Doar
-site.shows=Shows
-site.news=Novidades
-site.music_download=Baixar Músicas
-site.download_cd=Baixe grátis as músicas do meu primeiro CD
-site.contact=Contato
-site.release1=Cantora desde sempre, formada em Música pela Faculdade de Artes Alcântara Machado, Daniella Alcarpe vem se apresentando em diversas casas de espetáculo, bares, espaços culturais e teatros de São Paulo. Descubra <a href="/agenda">quando é o próximo show</a>! É só abrir a página da <a href="http://www.facebook.com/daniella.alcarpe">Daniella Alcarpe no Facebook</a>  ou no <a href="http://www.twitter.com/cantora">Twitter</a>!
-site.release2=Você vai ver que a busca por beleza e qualidade levou Daniella a interpretar os antigos clássicos da MPB e também canções inéditas, feitas por compositores contemporâneos ainda desconhecidos do grande público. Depois de uma breve temporada na Itália e na Holanda, Daniella voltou ao Brasil mais disposta do que nunca a divulgar a <a href="http://www.mpb.com">música popular brasileira</a> no que ela tem de melhor.
-site.release3=Além da carreira como <a href="http://www.twitter.com/cantora">cantora</a>, Daniella desenvolve um trabalho como atriz e apresentou-se nos espetáculos "O Santo Inquérito" de Dias Gomes, com direção de Silvio Tadeu e "As Bacantes" de Eurípedes, com direção de Jorge Oliva. Fez parte do Grupo de Teatro "Transver", dirigido por Jolanda Gentileza e estudou interpretação com Isabel Setti.
-site.cd1=Voltada quase que exclusivamente ao estudo e interpretação da música popular brasileira, Daniella tem como principais referências o trabalho de Carmen Miranda, Elis Regina, Isaura  Garcia e Maria Betânia, além de Cartola, Assis Valente, Adoniran Barbosa, Chico Buarque, Dorival Caymmi, Vinicius de Moraes e Tom Jobim.
-site.cd2=Sob estas influências, em seu primeiro disco solo, "<a href="http://www.amazon.com/Qu%C3%A9-Que-C%C3%AA/dp/B002PBWCZI">Qué que cê qué?</a>", Daniella interpreta composições inéditas em ritmos de samba, baião, frevo e choro. A escolha do repertório teve como critérios a qualidade poética das letras, a riqueza melódica de cada obra e claro, sua identificação pessoal, adicionando a cada peça uma interpretação plena de cuidados e talento.
-site.cd3=As canções assinadas por Carlos Careqa, uma das quais dá nome ao CD, Dimitri Bentok, <a href="http://www.myspace.com/joaomarcondessn">João Marcondes</a>, Joca Freire, Lucy Casas e <a href="http://www.myspace.com/zederiba">Zé de Riba</a>, têm arranjos e produção  musical de João Marcondes.
-site.cd4=A estética musical do CD busca uma sonoridade original, trazendo novos elementos musicais aos já consagrados ritmos brasileiros, em arranjos que utilizam violão de 7 cordas, violão de corda de aço, violão de corda de nylon, guitarra fretless, guitarra semi-acústica, bandolim, cavaquinho, percussões, flauta transversal, trombone, saxofone, teclado e baixo.
-site.ringtone=RINGTONE Exclusivo! Agora você pode colocar a música Vestidim da Daniella como toque no seu iPhone. <a href="/ringtone.m4r">Baixe o ringtone clicando <strong>aqui</strong></a> para ouvir Vestidim toda vez que alguém telefonar pra você.
+site.donate=Faire le don
+site.shows=Spetacles
+site.news=Nouvelles
+site.music_download=TÃ©lÃ©charger las musiques
+site.download_cd=TÃ©lÃ©charger gratuitement las musiques du premier CD
+site.contact=Contact
+site.release1="Toujours chanteuse, Daniella Alcarpe est diplÃ´mÃ© en musique pour la FacultÃ© d'Arts AlcÃ¢ntara Machado. Elle se prÃ©sente en diffÃ©rentes salles de concert, bars, centres culturels et thÃ©Ã¢tres de SÃ£o Paulo. En savoir quand est le <a href='/agenda'>prochain spectacle</a>! Il suffit d'ouvrir la page de <a href='http://www.facebook.com/daniella.alcarpe'>Daniella Alcarpe</a> sur Facebook ou <a href='http://www.twitter.com/cantora'>Twitter</a>!"
+site.release2="Vous verrez que la recherche pour la beautÃ© et la qualitÃ© a conduit Daniella pour interprÃ©ter des anciens classiques de la <a href='http://www.mpb.com'>MPB</a> et aussi de nouvelles chansons, faites par les compositeurs contemporains encore inconnus du grand public. AprÃ¨s un bref sÃ©jour en Italie et aux Pays-Bas, Daniella est retournÃ© au BrÃ©sil plus disposÃ©s que jamais Ã  se rÃ©pandre de la <a href='http://www.mpb.com'>musique populaire brÃ©silienne</a> qu'est-ce qu'elle a de mieux."
+site.release3="Au-delÃ  de la carriÃ¨re de <a href='http://www.twitter.com/cantora'>chanteuse</a>, Daniella dÃ©veloppe un travail en tant qu'actrice et jouÃ© dans des spectacles L'EnquÃªte SainteÂ» de Dias Gomes, dirigÃ© par Silvio Tadeu et Les Bacchantes d'Euripide, mis en scÃ¨ne par Jorge Oliva. Elle a fait partie du Groupe de ThÃ©Ã¢tre Transver, dirigÃ© par Jolanda Gentileza et elle a aussi Ã©tudiÃ©e interprÃ©tation avec Isabel Setti."
+site.cd1="ConcentrÃ©e presque exclusivement Ã  l'Ã©tude et l'interprÃ©tation de la musique populaire brÃ©silienne,  Daniella a comme ses rÃ©fÃ©rences principales le travail de Carmen Miranda, Elis Regina, Maria Isaura Garcia et de BÃ©thanie,  ainsi comme Cartola, Assis Valente, Adoniran Barbosa, Chico Buarque, Dorival Caymmi, Vinicius de Moraes et Tom Jobim."
+site.cd2="Sous ces influences, dans son premier album solo, Â« <a href='http://www.amazon.com/Qu%C3%A9-Que-C%C3%AA/dp/B002PBWCZI'>QuÃ© que cÃª quÃ©?</a> Â», Daniella joue de nouvelles compositions dans les rythmes de la samba, la ballade, le frevo et le choro. Le choix du rÃ©pertoire a Ã©tÃ© faite Ã  partir des critÃ¨res de la qualitÃ© poÃ©tique de las lettres, de la richesse mÃ©lodique de chaque oeuvre et bien sÃ»r, de son identification personnelle, en ajoutant a chaque piÃ¨ce une interprÃ©tation pleine de diligence et talent."
+site.cd3="Les chansons signÃ©es par Carlos Careqa, dont l'un donne son nom au CD, Dimitri Bentok, JoÃ£o Marcondes </a>, Joca Freire, Lucy Casas et  ZÃ© de Riba, ont des arrangements et la production musicale de JoÃ£o Marcondes."
+site.cd4="Les esthÃ©tiques musicales du CD recherche d'un son original, apportant de nouveaux Ã©lÃ©ments musicaux aux rythmes brÃ©siliens dÃ©jÃ  Ã©tablies, dans les arrangements qui utilisent guitarede 7 cordes, guitare Ã  cordes d'acier, guitare Ã  cordes de nylon, guitare fretless, semi-acoustique guitare, la mandoline , ukulÃ©lÃ©, percussions, flÃ»te, trombone, saxophone, clavier et basse."
+site.ringtone="SONNERIE Exclusif! Maintenant vous pouvez mettre Vestidim de Daniella comme sonnerie sur votre iPhone. <a href='/ringtone.m4r'>TÃ©lÃ©charger la sonnerie en cliquant <strong>ici</strong></a> pour Ã©couter Vestidim chaque fois que quelqu'un vous appelle."

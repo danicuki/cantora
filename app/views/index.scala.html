@@ -1,14 +1,14 @@
 @(videos: List[String]) @main("oi") {
 <div class="grid_8 last">
 	<center>
-		<a href="" class="superlarge awesome red" title="@Messages("site.download_cd")">@Messages("site.download_cd")</a>
+		<a href="@routes.Application.download" class="superlarge awesome red" title="@Messages("site.download_cd")">@Messages("site.download_cd")</a>
 		<br>
 		<br>
 	</center>
 </div>
 <div class="grid_8" style="text-align: center">
 	<iframe width="853" height="480"
-		src="http://www.youtube.com/embed/@videos((Math.random * videos.size.doubleValue).intValue)"
+		src="http://www.youtube.com/embed/@videos((scala.math.random * videos.size.doubleValue).intValue)"
 		frameborder="0" allowfullscreen></iframe>
 </div>
 }

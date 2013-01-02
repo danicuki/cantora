@@ -18,3 +18,5 @@ GET     /novidades                           controllers.Application.news
 GET     /fotos                           controllers.Application.photos
 GET     /videos                           controllers.Application.videos
 GET     /lang                             controllers.Application.changeLocale
+GET     /download                         controllers.Application.download
+POST    /visitors                         controllers.Application.addVisitor

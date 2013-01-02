@@ -232,3 +232,10 @@ a.ps_close:hover{
 	background:url(http://static.cantora.mus.br/images/loading.gif) no-repeat center center;
 }
 
+dl {
+	margin: 0px;
+}
+dt {
+	float: left;
+	padding-right: 20px;
+}
