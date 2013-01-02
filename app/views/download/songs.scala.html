@@ -1,0 +1,32 @@
+@()(implicit request: RequestHeader)
+
+@main(Messages("site.music_download")) {
+
+<div class="grid_2">
+  <h1>@Messages("site.music_download") &nbsp;&nbsp;&nbsp;</h1>
+</div>
+<div class="grid_8" style="text-align: center;">
+  <ul class="nobullet">
+    <li><a href="@routes.Download.downloadSong?track=1">Qué que cê qué?</a></li>
+    <li><a href="@routes.Download.downloadSong?track=2">Vestidim</a></li>
+    <li><a href="@routes.Download.downloadSong?track=3">Não tenho culpa que você não sabe sambar</a></li>
+    <li><a href="@routes.Download.downloadSong?track=4">Meu Querido Santo Antônio</a></li>
+    <li><a href="@routes.Download.downloadSong?track=5">Cantiga Antiga</a></li>
+    <li><a href="@routes.Download.downloadSong?track=6">Outros Tempos</a></li>
+    <li><a href="@routes.Download.downloadSong?track=7">Mais um Conselho</a></li>
+    <li><a href="@routes.Download.downloadSong?track=8">Canção do Colo</a></li>
+    <li><a href="@routes.Download.downloadSong?track=9">Caradum Cara do Outro</a></li>
+    <li><a href="@routes.Download.downloadSong?track=10">Somos Todos Irmãos</a></li>
+  </ul>
+  <br><br>
+  <p>@request.session.get("user"), @Messages("site.download_text1")</p>
+  <form action="https://www.paypal.com/cgi-bin/webscr" method="post">
+  <input type="hidden" name="cmd" value="_s-xclick">
+  <input type="hidden" name="hosted_button_id" value="PL7CD49ZHMPWE">
+  <button class="awesome red large">@Messages("site.donate")</button>
+  
+  </form>
+  <p>@Messages("site.download_text2")</p>
+  <p><a class="awesome red large" href="@Messages("site.buy_link")">@Messages("site.buy_text")</a></p>
+</div>
+}

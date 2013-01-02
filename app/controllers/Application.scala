@@ -10,9 +10,8 @@ import play.api.i18n.Lang
 import play.api.libs.json.JsArray
 import play.api.libs.json.JsObject
 import scala.collection.mutable.MutableList
-import play.api.data._
-import play.api.data.Forms._
-import play.api.data.Form
+import play.api.http.Writeable
+import scala.collection.immutable.Nil
 
 object Application extends CookieLang {
 
@@ -72,16 +71,4 @@ object Application extends CookieLang {
 
   def news = Action { Ok(views.html.news()) }
 
-  val userForm = Form(
-    tuple(
-      "email" -> text,
-      "full_name" -> text))
-
-  def download = Action {
-    Ok(views.html.download(userForm))
-  }
-
-  def addVisitor = Action {
-    Redirect(routes.Application.index)
-  }
 }

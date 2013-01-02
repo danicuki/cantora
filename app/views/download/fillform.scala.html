@@ -1,4 +1,4 @@
-@(visitorForm: Form[(String, String)])
+@(visitorForm: Form[controllers.Download.User])
 
 @import helper._
 
@@ -12,7 +12,7 @@
 
   @Messages("site.download_instructions")
   <br><br>
-      @form(routes.Application.addVisitor) {
+      @form(routes.Download.addVisitor) {
         <p>        
         @inputText(visitorForm("name"), 'size -> 30) <br>
         </p>
