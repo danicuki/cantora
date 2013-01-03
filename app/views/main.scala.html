@@ -1,6 +1,6 @@
 @(title: String)(content: Html)(implicit request: RequestHeader)
 
-@implicitLang = @{ request.session.get("lang") match { case Some(t) => new Lang(t); case None => new Lang("en")  }}
+@implicitLang = @{ request.session.get("lang") match { case Some(t) => new Lang(t); case None => Lang("en-US")  }}
 
 <!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN"
   "http://www.w3.org/TR/html4/strict.dtd">

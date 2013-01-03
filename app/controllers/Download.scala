@@ -8,9 +8,10 @@ import play.api.data._
 import play.api.data.Forms._
 import play.api.data.format.Formats._
 import play.api.libs.ws.WS
+import models.User
 
-object Download extends Controller {
-  case class User(email: String, name: String)
+trait Download {
+  this: Controller =>
 
   val userForm = Form(
     mapping(
@@ -47,3 +48,5 @@ object Download extends Controller {
     }
   }
 }
+
+object Download extends Controller with Download
