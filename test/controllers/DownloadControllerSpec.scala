@@ -17,13 +17,22 @@ import play.api.data.format.Formats._
 import play.api.libs.ws.WS
 
 class DownloadControllerSpec extends Specification {
-  class TestDownloadController() extends Controller with Download
 
   "Download Page" should {
-    "be valid" in {
-      val controller = new TestDownloadController()
-      val result = controller.download()
-      result must not beNull
+    "show download form" in {
+      val result = controllers.Download.download()(FakeRequest())
+      status(result) must equalTo(OK)
+      contentAsString(result) must not contain ("Vestidim")
+      contentAsString(result) must contain("email")
+    }
+
+    "show songs when user provide email and name" in {
+      running(FakeApplication(additionalConfiguration = Map("application.secret" -> "test"))) {
+        val result = controllers.Download.download()(FakeRequest().withSession("user" -> "fulano"))
+        status(result) must equalTo(OK)
+        contentAsString(result) must contain("Vestidim")
+        contentAsString(result) must contain("fulano")
+      }
     }
   }
 }

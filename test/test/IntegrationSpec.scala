@@ -9,12 +9,12 @@ import org.fluentlenium.core.filter.FilterConstructor._
 
 class IntegrationSpec extends Specification {
 
-  "Application" should {
+  "Cantora website" should {
     "have all top menus working" in {
       running(TestServer(3300), HTMLUNIT) { browser =>
         browser.goTo("http://localhost:3300/")
 
-        Seq("Singer", "Music", "Shows", "News").foreach { menu =>
+        Seq("Singer", "Music", "Shows", "News", "Photo").foreach { menu =>
           browser.$("a", withText(menu)).click();
           browser.$("h1").first.getText must equalTo(menu)
         }

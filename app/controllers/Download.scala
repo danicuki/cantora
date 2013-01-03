@@ -10,8 +10,7 @@ import play.api.data.format.Formats._
 import play.api.libs.ws.WS
 import models.User
 
-trait Download {
-  this: Controller =>
+object Download extends Controller {
 
   val userForm = Form(
     mapping(
@@ -48,5 +47,3 @@ trait Download {
     }
   }
 }
-
-object Download extends Controller with Download
