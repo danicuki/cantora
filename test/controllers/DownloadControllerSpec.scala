@@ -4,7 +4,6 @@ import org.specs2.mutable._
 import play.api.test._
 import play.api.test.Helpers._
 import play.api.mvc._
-import controllers.Download
 import play.api._
 import play.api.Play.current
 import play.api._

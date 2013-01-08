@@ -9,13 +9,16 @@ import play.api.data.Forms._
 import play.api.data.format.Formats._
 import play.api.libs.ws.WS
 import models.User
+import com.mailee.Mailee
 
 object Download extends Controller {
 
   val userForm = Form(
     mapping(
       "email" -> of[String],
-      "name" -> text)(User.apply)(User.unapply))
+      "name" -> text,
+      "id" -> number,
+      "visitCount" -> number)(User.apply)(User.unapply))
 
   def download = Action { implicit request =>
     session.get("user").map { user =>
@@ -27,13 +30,8 @@ object Download extends Controller {
 
   def addVisitor = Action { implicit request =>
     val user = userForm.bindFromRequest.get
-    val params = "contact[email]=" + user.email + "&contact[name]=" + user.name
-    Logger.logger.debug("params: " + params)
 
-    WS.url(current.configuration.getString("mailee.api").get + "/contacts.xml")
-      .post(params).map { response =>
-        Logger.logger.debug("response: " + response.body)
-      }
+    Mailee.create(user.email, user.name)
 
     Redirect(routes.Download.download).withSession(session + ("user" -> user.name))
   }
@@ -45,5 +43,13 @@ object Download extends Controller {
     }.getOrElse {
       Ok(views.html.download.fillform(userForm))
     }
+  }
+
+  private def updateViews(id: String, viewCount: String) = {
+    val newCount = viewCount.toInt + 1
+    val updateMap = Map("contact[phone]" -> Seq(newCount.toString))
+
+    WS.url(current.configuration.getString("mailee.api").get + "/" + id + ".xml")
+      .put(updateMap)
   }
 }
