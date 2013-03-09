@@ -20,3 +20,4 @@ tmp
 .settings
 .target
 conf/application.conf
+bin/
