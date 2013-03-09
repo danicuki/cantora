@@ -12,6 +12,7 @@ import play.api.libs.json.JsObject
 import scala.collection.mutable.MutableList
 import play.api.http.Writeable
 import scala.collection.immutable.Nil
+import play.api.libs.concurrent.Execution.Implicits.defaultContext
 
 object Application extends CookieLang {
 

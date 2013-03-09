@@ -5,7 +5,7 @@ import play.api.libs.ws.WS
 import play.api.Play.current
 import play.api.libs.concurrent.Akka
 import play.api.http.ContentTypeOf
-
+import play.api.libs.concurrent.Execution.Implicits._
 object Mailee {
 
   def create(email: String, name: String): User = {
@@ -16,7 +16,7 @@ object Mailee {
         val id = (response.xml \ "id").text.toInt
         val visitCount = ("0" + (response.xml \ "phone").text).toInt
         User(email, name, id, visitCount + 1)
-      }.value.get
+      }.value.get.get
 
     val userMap2 = userMap ++ Map("contact[phone]" -> Seq(user.visitCount.toString))
 
@@ -37,7 +37,7 @@ object Mailee {
           Some(User((response.xml \ "email").text, (response.xml \ "name").text, (response.xml \ "id").text.toInt, ("0" + (response.xml \ "phone").text).toInt))
         else
           None
-      }.value.get
+      }.value.get.get
   }
 
 }

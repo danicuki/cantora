@@ -10,9 +10,9 @@ import play.api.data.format.Formats._
 import play.api.libs.ws.WS
 import models.User
 import com.mailee.Mailee
+import play.api.libs.concurrent.Execution.Implicits.defaultContext
 
 object Download extends Controller {
-
   val userForm = Form(
     mapping(
       "email" -> of[String],
@@ -52,4 +52,5 @@ object Download extends Controller {
     WS.url(current.configuration.getString("mailee.api").get + "/" + id + ".xml")
       .put(updateMap)
   }
+
 }

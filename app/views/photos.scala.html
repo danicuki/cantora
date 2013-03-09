@@ -1,5 +1,4 @@
-@(albuns: List[play.api.libs.concurrent.Promise[List[String]]])(implicit request: RequestHeader)
-
+@(albuns: List[scala.concurrent.Future[List[String]]])(implicit request: RequestHeader)
 @main(Messages("site.photo")) {
 
 <h1>@Messages("site.photo")</h1>
